@@ -1,0 +1,21 @@
+language: cpp
+
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+      sudo: true
+      compiler: gcc
+      addons:
+       apt:
+         packages:
+           - cmake-data
+           - cmake
+           - ctest
+
+script:
+     - mkdir -p build
+     - cd build
+     - cmake ../
+     - make
+     - ctest -V

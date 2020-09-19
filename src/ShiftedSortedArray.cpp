@@ -30,6 +30,7 @@ pair<vector<int>, int> ShiftedSortedArray::Input(){
 // [5 6 7 8 9 10 1 2 3 4] , 4
 bool ShiftedSortedArray::Solve(const vector<int>& input, int target){
 
+    if (input.empty()) return false;
     int left = 1;
     int right = input.size()-1;
     int pivot = 0;
