@@ -11,7 +11,6 @@ matrix:
          packages:
            - cmake-data
            - cmake
-           - ctest
 
 script:
      - mkdir -p build
