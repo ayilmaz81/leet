@@ -4,13 +4,13 @@ matrix:
   include:
     - os: linux
       dist: bionic
-      sudo: true
       compiler: gcc
       addons:
        apt:
          packages:
            - cmake-data
            - cmake
+           - libgtest-dev
 
 script:
      - mkdir -p build
