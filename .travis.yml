@@ -19,8 +19,9 @@ before_script:
   - sudo cp *.a /usr/lib
 
 script:
-     - mkdir -p build
-     - cd build
-     - cmake ../
-     - make
-     - ctest -V
+  - cd ${TRAVIS_BUILD_DIR}
+  - mkdir -p build
+  - cd build
+  - cmake ../
+  - make
+  - ctest -V
