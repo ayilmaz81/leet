@@ -14,8 +14,8 @@ matrix:
 
 before_script:
   - cd /usr/src/gtest
-  - cmake CMakeLists.txt
-  - make
+  - sudo cmake CMakeLists.txt
+  - sudo make
   - cp *.a /usr/lib
 
 script:
