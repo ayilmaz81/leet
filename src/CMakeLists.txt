@@ -8,7 +8,8 @@ add_library(leet RemoveLastKthElement.cpp
                 ReverseList.cpp
                 IsBinaryTreeBST.cpp
                 TrieNode.cpp
-                ShiftedSortedArray.cpp)
+                ShiftedSortedArray.cpp
+                SimpleCalculator.cpp)
 
 add_executable(stdin main.cpp)
 

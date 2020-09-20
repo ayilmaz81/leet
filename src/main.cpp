@@ -7,6 +7,7 @@
 #include "IsBinaryTreeBST.hpp"
 #include "TrieNode.hpp"
 #include "ShiftedSortedArray.hpp"
+#include  "SimpleCalculator.hpp"
 
 using namespace std;
 
@@ -14,8 +15,7 @@ using namespace std;
 
 int main(){
     
-    auto input = ShiftedSortedArray::Input();
-    cout<<ShiftedSortedArray::Solve(input.first, input.second)<<'\n';
+    cout<<SimpleCalculator::Solve(SimpleCalculator::Input())<<'\n';
 
     return 0;
 
