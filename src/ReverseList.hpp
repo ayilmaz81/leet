@@ -3,6 +3,6 @@
 #include "ListNode.hpp"
 
 namespace ReverseList{
-    ListNodeChar* Input();
-    ListNodeChar* Solve(ListNodeChar * head);
+    ListNodeChar Input();
+    ListNodeChar Solve(ListNodeChar head);
 }

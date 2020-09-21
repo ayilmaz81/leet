@@ -2,7 +2,7 @@
 #include "ListNode.hpp"
 
 namespace RemoveDupesFromSortedLinkedList{
-    ListNode<int> *Input();
+    ListNodeInt Input();
 
-    ListNode<int> *Solve(ListNode<int> *head);
+    ListNodeInt Solve(ListNodeInt head);
 }

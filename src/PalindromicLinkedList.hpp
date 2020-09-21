@@ -2,7 +2,7 @@
 #include "ListNode.hpp"
 
 namespace PalindromicLinkedList{
-    ListNode<char> *Input();
+    ListNodeChar Input();
 
-    bool Solve(ListNode<char>*head);
+    bool Solve(ListNodeChar head);
 }

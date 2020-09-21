@@ -1,7 +1,7 @@
 #include "ReorderList.hpp"
 #include <iostream>
 using namespace std;
-ListNodeInt* ReorderList::Input(){
+ListNodeInt ReorderList::Input(){
     int k;
     cin>>k;
     vector<int> vec(k);
@@ -12,9 +12,9 @@ ListNodeInt* ReorderList::Input(){
 }
 namespace{
     template<typename T>
-    ListNode<T>* ReverseList(ListNode<T> *head){
+    shared_ptr<ListNode<T>> ReverseList(shared_ptr<ListNode<T>> head){
         auto node = head;
-        ListNode<T>* prev = nullptr;
+        shared_ptr<ListNode<T>> prev = nullptr;
         while(node != nullptr){
             auto next = node->next;
             node->next = prev;
@@ -26,7 +26,7 @@ namespace{
         return prev;
     }
 }
-void ReorderList::Solve(ListNodeInt* head){
+void ReorderList::Solve(ListNodeInt head){
     if (head == nullptr || head->next == nullptr)  return;
     auto fast = head;
     auto slow = head;
@@ -50,5 +50,4 @@ void ReorderList::Solve(ListNodeInt* head){
         node = nextnode;
         rev = nextrev;
     }
-    return;
 }

@@ -1,9 +1,9 @@
 #pragma once
 #include "ListNode.hpp"
-#include <map>
+#include <utility>
 
 namespace RemoveLastKthElement{
-    ListNode<int>* solve(ListNode<int>* head, int index);
-    std::pair<ListNode<int>*, int> input();
+    ListNodeInt solve(ListNodeInt head, int index);
+    std::pair<ListNodeInt, int> input();
     
 }

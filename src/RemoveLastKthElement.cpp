@@ -2,7 +2,7 @@
 using namespace std;
 
 namespace RemoveLastKthElement{
-    ListNode<int>* solve(ListNode<int>* head, int index){
+    ListNodeInt solve(ListNodeInt head, int index){
         if (head == nullptr || index == 0) return head;
         auto fast = head->next;
         auto slow = head;
@@ -18,18 +18,17 @@ namespace RemoveLastKthElement{
         else if (fast->next  == nullptr) totCount = 2*i;
 
         if (totCount<index) return head;
-        if (index == totCount) {auto node = head->next; delete head; return node;}
+        if (index == totCount) {auto node = head->next; return node;}
         auto prev = head;
         auto node = head;
         i = 0;
         while(i!= totCount - index) prev = node ,node = node->next,++i;
 
         prev->next = node->next;
-        delete node;
         return head;
     }
 
-    pair<ListNode<int>*, int> input(){
+    pair<ListNodeInt, int> input(){
         int count,index;
         cin>>count;
         vector<int> vec(count);

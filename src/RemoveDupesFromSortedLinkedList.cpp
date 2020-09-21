@@ -6,7 +6,7 @@
 
 using namespace std;
 
-ListNode<int> *RemoveDupesFromSortedLinkedList::Input(){
+ListNodeInt RemoveDupesFromSortedLinkedList::Input(){
     int k;
     cin>>k;
     vector<int> inp(k);
@@ -18,14 +18,13 @@ ListNode<int> *RemoveDupesFromSortedLinkedList::Input(){
     return build(inp);
 }
 
-ListNode<int> *RemoveDupesFromSortedLinkedList::Solve(ListNode<int> *head){
+ListNodeInt RemoveDupesFromSortedLinkedList::Solve(ListNodeInt head){
     auto prev = head;
     auto node = head->next;
     while(node != nullptr){
         if(node->val == prev->val){
             while(node != nullptr && prev->val == node->val){
                 auto n = node->next;
-                delete node;
                 node = n;
             }
             prev->next = node;

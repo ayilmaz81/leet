@@ -3,7 +3,7 @@
 
 using namespace std;
 
-ListNodeChar* ReverseList::Input(){
+ListNodeChar ReverseList::Input(){
     string inp;
 
     cin>>inp;
@@ -18,12 +18,12 @@ ListNodeChar* ReverseList::Input(){
 // prev = C
 // NODE = NEXT;
 
-ListNodeChar* ReverseList::Solve(ListNodeChar* head){
+ListNodeChar ReverseList::Solve(ListNodeChar head){
 
     if (head == nullptr || head->next == nullptr) return head;
 
     auto node = head;
-    ListNodeChar* prev = nullptr;
+    ListNodeChar prev = nullptr;
 
     while(node!=nullptr){
         auto next = node->next;

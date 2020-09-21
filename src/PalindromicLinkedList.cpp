@@ -4,17 +4,17 @@
 
 using namespace std;
 
-ListNode<char>* PalindromicLinkedList::Input(){
+ListNodeChar PalindromicLinkedList::Input(){
     string input;
     cin>>input;
     return build(input);
 }
 
-ListNodeChar * reverseList(ListNode<char> *head){
+ListNodeChar reverseList(ListNodeChar head){
     return ReverseList::Solve(head);
 }
 
-bool PalindromicLinkedList::Solve(ListNode<char> *head){
+bool PalindromicLinkedList::Solve(ListNodeChar head){
     auto slow = head;
     auto fast = head->next;
     while(fast != nullptr && fast->next != nullptr){

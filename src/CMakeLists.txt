@@ -11,7 +11,8 @@ add_library(leet RemoveLastKthElement.cpp
                 ShiftedSortedArray.cpp
                 SimpleCalculator.cpp
                 ValidNumber.cpp
-                ReorderList.cpp)
+                ReorderList.cpp
+                ListNode.cpp)
 
 add_executable(stdin main.cpp)
 

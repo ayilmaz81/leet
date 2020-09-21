@@ -7,15 +7,10 @@ using namespace std;
 class ReorderListTests :public ::testing::TestWithParam<std::pair<vector<int>, vector<int>>> {};
 
 TEST_P(ReorderListTests, all) {
-    ListNode<int> *node = build<int>(GetParam().first);
+    ListNodeInt node = build<int>(GetParam().first);
     ReorderList::Solve(node);
     auto ans = to_vector(node);
     ASSERT_EQ(ans,GetParam().second);
-    while(node != nullptr){
-        auto next = node->next;
-        delete node;
-        node = next;
-    }
 }
 
 INSTANTIATE_TEST_CASE_P(
