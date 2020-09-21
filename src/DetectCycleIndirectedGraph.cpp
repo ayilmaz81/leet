@@ -32,7 +32,7 @@ struct UF{
 
 void printParents( UF &uf){
     
-    for (int i = 0;i<uf.parent.size();++i){
+    for (size_t i = 0;i<uf.parent.size();++i){
         auto p = uf.find(i);
         cout<<i<<" : "<<p.first<<","<<p.second<<'\n';
     }

@@ -10,7 +10,7 @@ string SimpleCalculator::Input(){
     cin>>ret;
     return ret;
 }
-inline int stoi(const string&s, int& index){
+inline int stoi(const string&s, size_t& index){
     int ret = 0;
     while(index<s.size() && !isdigit(s[index])) ++index;
 
@@ -22,7 +22,7 @@ inline int stoi(const string&s, int& index){
     return ret;
 
 }
-int helper(const string&s, int &index){
+int helper(const string&s, size_t &index){
     int number = stoi(s, index);
     //index += dist-1;
 
@@ -41,7 +41,7 @@ int helper(const string&s, int &index){
     return number;
 }
 int SimpleCalculator::Solve(const string &s){
-    int index = 0;
+    size_t index = 0;
     int answer = helper(s,index);
 
     while(index<s.size()){
@@ -79,7 +79,7 @@ int Solve_(const string &s){
         }
     }
     
-    for (int i = 1;i<st.size();++i){
+    for (size_t i = 1;i<st.size();++i){
         if (st[i] == "*"){
             int ans = stoi(st[i-1])*stoi(st[i+1]);
             st[i-1].clear();
@@ -92,9 +92,8 @@ int Solve_(const string &s){
             st[i+1] = to_string(ans);
         }
     }
-    bool addition = true;
-    int i = -1;
-    while (++i<st.size() && st[i].empty());
+    size_t i = 0;
+    while (i<st.size() && st[i].empty()) ++i;
     answer = stoi(st[i]);
     while (++i<st.size()){
         if (st.empty()) continue;

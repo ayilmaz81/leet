@@ -6,7 +6,7 @@
 template<typename T>
 struct ListNode{
     T val;
-    ListNode<T>* next;
+    ListNode<T>* next = nullptr;
 };
 template<typename T>
 ListNode<T>* build(const std::vector<T>& v){
@@ -22,6 +22,18 @@ ListNode<T>* build(const std::vector<T>& v){
 
     return head;
 }
+
+template<typename T>
+std::vector<T> to_vector(ListNode<T>* head){
+    std::vector<T> ret;
+    while(head != nullptr){
+        ret.push_back(head->val);
+        head = head->next;
+    }
+
+    return ret;
+}
+
 using ListNodeChar = ListNode<char>; 
 ListNodeChar* build(const std::string& v);
 

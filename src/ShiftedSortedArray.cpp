@@ -48,10 +48,10 @@ bool ShiftedSortedArray::Solve(const vector<int>& input, int target){
     }
 
     auto it = lower_bound(input.begin(), input.begin()+pivot-1, target);
-    if (*it == target) return true;
+    if (it != input.end() &&  *it == target) return true;
     
     it = lower_bound(input.begin()+pivot, input.end(), target);
-    if (*it == target) return true;
+    if (it != input.end() && *it == target) return true;
 
     return false;
 }

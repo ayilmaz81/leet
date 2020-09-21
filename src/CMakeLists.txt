@@ -9,8 +9,12 @@ add_library(leet RemoveLastKthElement.cpp
                 IsBinaryTreeBST.cpp
                 TrieNode.cpp
                 ShiftedSortedArray.cpp
-                SimpleCalculator.cpp)
+                SimpleCalculator.cpp
+                ValidNumber.cpp
+                ReorderList.cpp)
 
 add_executable(stdin main.cpp)
+
+target_compile_options(leet PRIVATE -Werror -Wall -Wextra)
 
 TARGET_LINK_LIBRARIES(stdin pthread leet)
