@@ -13,7 +13,9 @@ add_library(leet RemoveLastKthElement.cpp
                 ValidNumber.cpp
                 ReorderList.cpp
                 ListNode.cpp
-                FibonacciSum.cpp)
+                FibonacciSum.cpp
+                SpiralMatrix.cpp
+                RotateArray.cpp)
 
 add_executable(stdin main.cpp)
 
