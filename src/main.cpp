@@ -17,7 +17,7 @@ using namespace std;
 
 int main(){
     
-    cout<<SimpleCalculator::Solve(SimpleCalculator::Input())<<'\n';
+    ///cout<<SimpleCalculator::Solve(SimpleCalculator::Input())<<'\n';
 
     return 0;
 

@@ -15,7 +15,11 @@ add_library(leet RemoveLastKthElement.cpp
                 ListNode.cpp
                 FibonacciSum.cpp
                 SpiralMatrix.cpp
-                RotateArray.cpp)
+                RotateArray.cpp
+                MaximumAvarageSubarray.cpp
+                PalindromePartitioning.cpp
+                DecodedStringIndex.cpp
+                LargeFactorial.cpp)
 
 add_executable(stdin main.cpp)
 
