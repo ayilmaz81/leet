@@ -19,7 +19,8 @@ add_library(leet RemoveLastKthElement.cpp
                 MaximumAvarageSubarray.cpp
                 PalindromePartitioning.cpp
                 DecodedStringIndex.cpp
-                LargeFactorial.cpp)
+                LargeFactorial.cpp
+                BinaryTree.cpp)
 
 add_executable(stdin main.cpp)
 
