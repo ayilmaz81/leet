@@ -20,7 +20,8 @@ add_library(leet RemoveLastKthElement.cpp
                 PalindromePartitioning.cpp
                 DecodedStringIndex.cpp
                 LargeFactorial.cpp
-                BinaryTree.cpp)
+                BinaryTree.cpp
+                SudokuSolver.cpp)
 
 add_executable(stdin main.cpp)
 
